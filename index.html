@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIL Learning Hub</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#f5f7fb;color:#222}
+nav{background:#111827;padding:16px;text-align:center;position:sticky;top:0;z-index:100}
+nav a{color:white;text-decoration:none;margin:0 12px;font-weight:bold}
+nav a:hover{color:#60a5fa}
+.hero{min-height:500px;background:linear-gradient(135deg,#172554,#2563eb);color:white;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
+.hero h1{font-size:55px;margin-bottom:15px}
+.hero p{font-size:21px;max-width:700px;margin:auto;line-height:1.6}
+.button{display:inline-block;margin-top:25px;padding:14px 25px;background:white;color:#1d4ed8;text-decoration:none;border-radius:8px;font-weight:bold}
+.container{max-width:1100px;margin:auto;padding:60px 20px}
+section{margin-bottom:70px}
+.title{text-align:center;margin-bottom:35px}
+.title h2{font-size:32px;color:#172554}
+.title p{margin-top:10px;color:#555}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.card h3{color:#2563eb;margin-bottom:12px}
+.card p{line-height:1.7}
+.lesson{background:white;padding:35px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08);margin-bottom:25px}
+.lesson h3{color:#1d4ed8;margin-bottom:15px}
+.lesson p{line-height:1.8}
+.tips{background:#dbeafe;padding:35px;border-radius:15px}
+.tips li{margin:12px 0}
+.quiz{background:white;padding:35px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+.question{margin-bottom:25px}
+.question button{display:block;width:100%;text-align:left;padding:13px;margin-top:8px;border:1px solid #ddd;background:#f8fafc;border-radius:7px;cursor:pointer}
+.question button:hover{background:#dbeafe}
+#result{margin-top:25px;font-size:20px;font-weight:bold;color:#1d4ed8}
+.submit{background:#2563eb;color:white;border:none;padding:14px 25px;border-radius:8px;cursor:pointer;font-weight:bold}
+footer{background:#111827;color:white;text-align:center;padding:35px}
+@media(max-width:600px){.hero h1{font-size:38px}nav a{margin:0 5px;font-size:14px}}
+</style>
+</head>
+<body>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About MIL</a>
+<a href="#lessons">Lessons</a>
+<a href="#tips">Tips</a>
+<a href="#quiz">Quiz</a>
+</nav>
+
+<header class="hero" id="home">
+<div>
+<h1>MIL Learning Hub</h1>
+<p>Media and Information Literacy helps us become smart, critical, responsible, and informed users of media and information.</p>
+<a class="button" href="#about">Start Learning</a>
+</div>
+</header>
+
+<div class="container">
+<section id="about">
+<div class="title">
+<h2>What is Media and Information Literacy?</h2>
+<p>Understanding information in the digital world</p>
+</div>
+<div class="card">
+<p>Media and Information Literacy, or MIL, is the ability to access, analyze, evaluate, create, and communicate information using different forms of media.</p>
+<br>
+<p>MIL is important because people receive information every day through social media, television, websites, newspapers, videos, and other platforms.</p>
+</div>
+</section>
+
+<section>
+<div class="title"><h2>Major Areas of MIL</h2></div>
+<div class="cards">
+<div class="card"><h3>Media Literacy</h3><p>Understanding and analyzing messages created by different types of media.</p></div>
+<div class="card"><h3>Information Literacy</h3><p>Finding, evaluating, and using information correctly and responsibly.</p></div>
+<div class="card"><h3>Digital Literacy</h3><p>Using digital devices, applications, and online platforms effectively and responsibly.</p></div>
+<div class="card"><h3>Critical Thinking</h3><p>Questioning information and checking evidence before believing or sharing it.</p></div>
+</div>
+</section>
+
+<section id="lessons">
+<div class="title"><h2>MIL Lessons</h2></div>
+<div class="lesson"><h3>Lesson 1: Types of Media</h3><p>Media can include print media, broadcast media, digital media, and social media. Each type can communicate information to different audiences.</p></div>
+<div class="lesson"><h3>Lesson 2: Evaluating Information</h3><p>Before trusting information, check the author, source, date, evidence, and other reliable sources. Do not depend only on a headline or social media post.</p></div>
+<div class="lesson"><h3>Lesson 3: Fake News</h3><p>False or misleading information can spread quickly online. Users should verify information before believing or sharing it.</p></div>
+<div class="lesson"><h3>Lesson 4: Responsible Media Use</h3><p>Responsible media users respect other people, protect their privacy, avoid spreading false information, and think carefully before posting.</p></div>
+</section>
+
+<section id="tips">
+<div class="title"><h2>How to Spot Unreliable Information</h2></div>
+<div class="tips">
+<ul>
+<li>Check the source.</li><li>Check who wrote the information.</li><li>Check the publication date.</li><li>Look for evidence.</li><li>Compare different reliable sources.</li><li>Be careful with sensational headlines.</li><li>Do not immediately share unverified information.</li>
+</ul>
+</div>
+</section>
+
+<section id="quiz">
+<div class="title"><h2>MIL Quick Quiz</h2><p>Test what you learned.</p></div>
+<div class="quiz">
+<div class="question"><p><strong>1. What should you do before sharing questionable information?</strong></p>
+<button onclick="answer(1,false)">Share it immediately</button>
+<button onclick="answer(1,true)">Verify the information</button>
+<button onclick="answer(1,false)">Ignore the source</button></div>
+<div class="question"><p><strong>2. Which is an important part of information literacy?</strong></p>
+<button onclick="answer(2,false)">Believing every post</button>
+<button onclick="answer(2,true)">Evaluating sources</button>
+<button onclick="answer(2,false)">Sharing rumors</button></div>
+<div class="question"><p><strong>3. What does MIL help develop?</strong></p>
+<button onclick="answer(3,true)">Critical thinking</button>
+<button onclick="answer(3,false)">Rumor spreading</button>
+<button onclick="answer(3,false)">Blind trust</button></div>
+<button class="submit" onclick="showScore()">Show My Score</button>
+<div id="result"></div>
+</div>
+</section>
+</div>
+
+<footer>
+<p><strong>MIL Learning Hub</strong></p>
+<p>Media and Information Literacy Educational Website</p>
+<p>Learn • Verify • Think • Share Responsibly</p>
+</footer>
+
+<script>
+let score=0,answered={};
+function answer(question,correct){
+if(answered[question])return;
+answered[question]=true;
+if(correct)score++;
+}
+function showScore(){
+document.getElementById("result").innerHTML="Your score: "+score+" / 3";
+}
+</script>
+</body>
+</html>
